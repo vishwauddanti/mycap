@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="org.myvideocapture.videoCapture"
+    version="0.1.0">
+    <name>VideoCapture</name>   
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="VideoCapture">
+                <param name="ios-package" value="VideoCapture" /> 
+            </feature>
+        </config-file>
+        <js-module src="www/VideoCapture.js" name="VideoCapture">
+            <clobbers target="videoCapture" />
+        </js-module>
+        <header-file src="src/ios/VideoCapture.h" />
+	    <source-file src="src/ios/VideoCapture.m" />
+	    <header-file src="src/ios/VideoCaptureViewController.h" />
+		<source-file src="src/ios/VideoCaptureViewController.m" />
+		<resource-file src="src/ios/VideoCaptureViewController-iPad.xib" />
+		<resource-file src="src/ios/VideoCaptureViewController.xib" />
+    </platform>
+</plugin>
